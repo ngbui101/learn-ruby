@@ -5,11 +5,8 @@ Tim uoc so le lon nhat cua so nguyen duong n nhap tu ban phim
 n = gets.chomp.to_i
 for i in n.downto(1) 
 	if n%i == 0 && i%2 != 0
-	break
+		break
 	end
 end
 puts i
-<<<<<<< HEAD
 
-=======
->>>>>>> 1b83cc8c4b5ef6456191568f3308d139234ac45d

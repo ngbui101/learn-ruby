@@ -1,7 +1,7 @@
 n = gets.chomp.to_i
-s = 0
+h = 0
 for i in 1..10
-	s += i * n
+	h += i * n
 end
-puts s
+puts h
 	
