@@ -9,4 +9,7 @@ for i in n.downto(1)
 	end
 end
 puts i
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1b83cc8c4b5ef6456191568f3308d139234ac45d
