@@ -1,14 +1,17 @@
 =begin
 tim vi tri cac so nho nhat trong mang
 =end
-a = 10.times.map{rand(-10..10)}
+arr = 10.times.map{rand(-10..10)}
+min = 0
 j = 0
-q = 0
-for i in 0..(a.length-1)
-	if j > a[i]
-		j = a[i] 
-		q = i
+arr.each do |a| 
+	if min > a  
+		min = a
 	end
-end 
-puts "Vi tri cac so nho nhat trong mang la #{q}"	
-
+end
+arr.each_with_index do |a, i|	
+	if a == min
+		puts "Vi tri cac so nho nhat trong mang la #{i+1}"	
+	end
+end
+puts arr.inspect

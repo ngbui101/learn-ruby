@@ -1,10 +1,10 @@
 =begin
 dem cac so chinh phuong co trong mang
 =end
-a = 10.times.map{rand(-10..10)}
+arr = 10.times.map{rand(-10..10)}
 j = 0
-for i in 1..(a.length-1)
-	if a[i] > 0 && Math.sqrt(a[i]) == Math.sqrt(a[i]).to_i   
+arr.each do |a|
+	if a > 0 && Math.sqrt(a) == Math.sqrt(a).to_i   
 		j += 1
 	end
 end
