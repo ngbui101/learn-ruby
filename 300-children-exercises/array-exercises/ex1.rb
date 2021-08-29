@@ -6,7 +6,6 @@ h = 0
 j = 0
 for i in 0..(a.length-1)
 	if i % 2 == 0 && a[i] % 2 != 0
-		#puts a[i]
 		h += a[i] 
 		j += 1
 	end 
@@ -16,10 +15,3 @@ puts "Arithmetic Mean ist #{h/j}"
 
 
 
-#puts a.inspect  
-#=begin
-#t = a.values_at(*a.each_index.select {|i| i.even?} & a.select(&:odd?)
-
-#puts t
- 
-#=end
