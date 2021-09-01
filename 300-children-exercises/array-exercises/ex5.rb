@@ -6,7 +6,11 @@ arr = 10.times.map{rand(-10..10)}
 #b = a.select{|a| a.prime?}
 prime = []
 arr.each do |a|
-	if a.prime? == true
+	check = true
+	for i in 2..(a - 1) 
+		check = false if a % i == 0
+	end
+	if a >= 2 && check == true 
 		prime.push(a)
 	end
 end

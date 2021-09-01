@@ -1,14 +1,13 @@
 =begin 
 sap xep theo thu tu lon dan trong mang 
 =end
-a = 10.times.map{rand(-10..10)}
-for i in 0..9
-	j = i + 1 
-	for j in 0..9	
-		if (a[i] < a[j]) 
-			a[i], a[j] = a[j], a[i]
+arr = 10.times.map{rand(-10..10)}
+
+for i in 0..(arr.length - 1)
+	for j in (i+1)..(arr.length - 1)
+		if (arr[i] > arr[j]) 
+			arr[i], arr[j] = arr[j], arr[i]
 		end
 	end
 end
-puts a.inspect
-
+puts arr.inspect

@@ -2,16 +2,16 @@
 tim vi tri cac so nho nhat trong mang
 =end
 arr = 10.times.map{rand(-10..10)}
-min = 0
-j = 0
-arr.each do |a| 
-	if min > a  
+min = arr[0] 
+count = 0
+arr.each_with_index do |a, i|
+	if min >= a 
 		min = a
-	end
+		count = i	
+	end	
 end
-arr.each_with_index do |a, i|	
-	if a == min
-		puts "Vi tri cac so nho nhat trong mang la #{i+1}"	
-	end
-end
+index = [arr.find_index(min) + 1, count +1]
+puts "Vi tri cac so nho nhat trong mang la #{index.uniq}"
 puts arr.inspect
+
+

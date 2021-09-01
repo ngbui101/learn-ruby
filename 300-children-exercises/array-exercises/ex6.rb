@@ -2,10 +2,8 @@
 Thay the cac gia tri am co trong mang bang 0
 =end
 arr = 10.times.map{rand(-10..10)}  
-for i in 0..(arr.length - 1) 
-	if arr[i] < 0 
-		arr[i] = [0]
-	end
-end 
-
+negativ = []
+arr.each_with_index{|a, i| a < 0 ? negativ.push(i):nil}  	  
+negativ.each{|a| arr[a] = 0} 
+puts arr.inspect
 
